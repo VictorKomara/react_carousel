@@ -1,14 +1,41 @@
 // style go here
-.Carousel__list {
+.Control-panel {
+  // background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
   display: flex;
-  list-style: none;
-  margin: 0 0 20px 0;
-  padding: 0;
-  width: 650px;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  width: 300px;
+}
+
+.Control-item {
+  margin: 0 auto;
+}
+
+.Carousel {
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
 
   &__list {
-    transition: transform 0.5s ease-in-out;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__container {
+    margin-top: 50px;
   }
 }
 
@@ -21,15 +48,10 @@ input {
 }
 
 button {
-  margin-left: 15px;
+  // margin-left: 15px;
   cursor: pointer;
-}
 
-.Control-panel {
-  display: flex;
-  margin-bottom: 20px;
-}
-
-.Control-item {
-  margin-left: 20px;
+  &:disabled {
+    cursor: no-drop;
+  }
 }
